@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import {GiHamburgerMenu} from 'react-icons/gi'
-import { dummydata } from '../shared/data';
+import Md from '../shared/md';
 
 const Nav = () => {
     return (
@@ -19,23 +19,7 @@ const Nav = () => {
                 <button>더보기</button>
                 </div>
             </div>
-            <div className='md-wrap'>
-                <div className='md-img'>
-                <img src='https://codingapple1.github.io/shop/shoes1.jpg'/>
-                <h4>{dummydata[0].title}</h4>
-                <p>상품설명 & 가격</p>
-                </div>
-                <div className='md-img'>
-                <img src='https://codingapple1.github.io/shop/shoes2.jpg'/>
-                <h4>상품명</h4>
-                <p>상품설명 & 가격</p>
-                </div>
-                <div className='md-img'>
-                <img src='https://codingapple1.github.io/shop/shoes3.jpg'/>
-                <h4>상품명</h4>
-                <p>상품설명 & 가격</p>
-                </div>
-            </div>
+            <Md/>
         </Wrap>
     );
 };
@@ -92,15 +76,6 @@ const Wrap = styled.div `
                     background-color: white;
                     color: coral;
                 }
-            }
-        }
-    }
-    .md-wrap{
-        width: 50%;
-        margin: 0 auto;
-        .md-img{
-            img{
-                width: 100%;
             }
         }
     }
