@@ -6,12 +6,6 @@ import Md from '../shared/md';
 const Nav = () => {
     return (
         <Wrap>
-            <div className='navbar'>
-                <span>
-                    shopping mall
-                </span>
-                <GiHamburgerMenu className='icon'/>
-            </div>
             <div className='bodyWrap'>
                 <div className='text-wrap'>
                 <div className='maintext'>20% Season Off</div>
@@ -27,25 +21,6 @@ const Nav = () => {
 export default Nav;
 
 const Wrap = styled.div `
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 50px;
-        background-color: coral;
-        span{
-            padding: 10px;
-            font-weight: bold;
-            font-size: 20px;
-            color: white;
-        }
-        .icon{
-            padding: 10px;
-            font-size: 20px;
-            color: white;
-        }
-    }
     .bodyWrap{
         width: 100%;
         height: 250px;
