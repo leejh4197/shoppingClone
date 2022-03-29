@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import Md from '../shared/md';
+import axios from 'axios'
+
 
 const Nav = () => {
+    const [list, setList] = useState([]);
     return (
         <Wrap>
             <div className='bodyWrap'>
@@ -13,7 +16,12 @@ const Nav = () => {
                 <button>더보기</button>
                 </div>
             </div>
-            <Md/>
+            <Md list={list}/>
+            <button className='btn' onClick={()=>{
+                axios.get('https://codingapple1.github.io/shop/data2.json').then((res)=>{
+                    setList(res.data)
+                }).catch(()=>{console.log('에러')})
+             }}>더보기</button>
         </Wrap>
     );
 };

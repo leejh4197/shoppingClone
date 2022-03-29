@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import {dummydata} from './data';
 
-const md = () => {
+const md = (props) => {
+    const datas = ([...dummydata, ...props.list]);
+    console.log(datas)
     return (
         <Wrap>
             {
-                dummydata.map((i) => {
+                datas.map((i) => {
 
                     return (
                         <div className='md-wrap'>
